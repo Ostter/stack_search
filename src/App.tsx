@@ -1,12 +1,8 @@
-import classnames from "classnames";
 import * as React from "react";
 import { ReactElement } from "react";
 import { useEffect, useRef, useState } from "react";
 import { fetchQuestionByTitle } from "./api/api";
-import * as styleMappingButton from "snake-eyes/dist/styleguide/buttons.module.css.js";
-import * as styleMappingInput from "snake-eyes/dist/styleguide/input.module.css.js";
-import "snake-eyes/dist/components/main.min.css";
-import "../style/app.css";
+import * as style from "../style/app.module.css";
 
 interface IQuestion {
   title: string;
@@ -48,10 +44,10 @@ const App = (): ReactElement<Node> => {
   };
 
   return (
-    <div className="app">
-      <div className="block">
+    <div className={style.app}>
+      <div className={style.block}>
         <input
-          className={classnames(styleMappingInput.standardSize, "marginSearch")}
+          className={style.whiteInput}
           type="text"
           value={search}
           ref={inputSearchRef}
@@ -59,13 +55,7 @@ const App = (): ReactElement<Node> => {
           placeholder="type question"
         />
 
-        <button
-          className={classnames(
-            styleMappingButton.typeNormalCancel,
-            "marginSearch"
-          )}
-          onClick={findQuestions}
-        >
+        <button className={style.whiteButton} onClick={findQuestions}>
           Find questions
         </button>
       </div>
@@ -74,7 +64,7 @@ const App = (): ReactElement<Node> => {
         {questions.length > 0 &&
           questions.map(({ title, link }: IQuestion, index: number) => {
             return (
-              <p key={index} className="result">
+              <p key={index} className={style.result}>
                 <a href={link} target="_blank">
                   {decodeHTML(title)}
                 </a>

@@ -24,10 +24,10 @@
     "url": "https://github.com/Ostter/stack_search.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "webpack && tsc",
     "clean": "rimraf lib",
     "prepare": "npm run clean && npm run build",
-    "watch": "tsc -w"
+    "watch": "webpack -w && tsc -w"
   },
   "dependencies": {
     "@jupyterlab/application": "^0.19.1",
