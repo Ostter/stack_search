@@ -1,14 +1,10 @@
 {
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "node_modules/**/*.ts",
-      "src/serviceWorker.js"
-    ]
+    "exclude": ["node_modules/**/*.ts", "src/serviceWorker.js"]
   },
   "rules": {
     "object-literal-sort-keys": false,
     "no-shadowed-variable": false
-
   }
 }

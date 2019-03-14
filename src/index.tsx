@@ -17,7 +17,6 @@ import "../style/index.css";
  * An search viewer.
  */
 class SearchWidget extends Widget {
-
   /**
    * The div element associated with the widget.
    */
@@ -37,7 +36,6 @@ class SearchWidget extends Widget {
     this.rootReact.setAttribute("id", "rootReact");
     this.node.appendChild(this.rootReact);
   }
-
 
   // /**
   //  * Handle update requests for the widget.

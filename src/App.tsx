@@ -1,10 +1,10 @@
-import classnames from 'classnames';
+import classnames from "classnames";
 import * as React from "react";
 import { ReactElement } from "react";
 import { useEffect, useRef, useState } from "react";
 import { fetchQuestionByTitle } from "./api/api";
-import * as styleMappingButton from 'snake-eyes/dist/styleguide/buttons.module.css.js';
-import * as styleMappingInput from 'snake-eyes/dist/styleguide/input.module.css.js';
+import * as styleMappingButton from "snake-eyes/dist/styleguide/buttons.module.css.js";
+import * as styleMappingInput from "snake-eyes/dist/styleguide/input.module.css.js";
 import "snake-eyes/dist/components/main.min.css";
 import "../style/app.css";
 
@@ -29,7 +29,9 @@ const App = (): ReactElement<Node> => {
 
   const findQuestions = async () => {
     const data = await fetchQuestionByTitle(search);
-    const questions = data.items.map(({ title, link }: IQuestion): object => ({ title, link }));
+    const questions = data.items.map(
+      ({ title, link }: IQuestion): object => ({ title, link })
+    );
     setQuestion(questions);
   };
 
@@ -46,7 +48,7 @@ const App = (): ReactElement<Node> => {
   };
 
   return (
-     <div className="app">
+    <div className="app">
       <div className="block">
         <input
           className={classnames(styleMappingInput.standardSize, "marginSearch")}
@@ -57,7 +59,13 @@ const App = (): ReactElement<Node> => {
           placeholder="type question"
         />
 
-        <button className={classnames(styleMappingButton.typeNormalCancel, "marginSearch")} onClick={findQuestions}>
+        <button
+          className={classnames(
+            styleMappingButton.typeNormalCancel,
+            "marginSearch"
+          )}
+          onClick={findQuestions}
+        >
           Find questions
         </button>
       </div>

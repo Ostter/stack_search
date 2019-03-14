@@ -1,5 +1,5 @@
 @value colors: "snake-eyes/styleguide/variablesColors.module.css";
-@value GB-1, GS-2, MCO-3 from colors;
+@value GB-1 from colors;
 
 .app {
   text-align: center;
@@ -17,15 +17,3 @@
 .marginSearch {
   margin: 0 8px;
 }
-
-/*.whiteButton {*/
-  /*composes: typeNormalCancel from "~snake-eyes/dist/components/main.min.css";*/
-  /*margin: 0 8px;*/
-/*}*/
-
-/*.whiteInput {*/
-  /*composes: standardSize from "~snake-eyes/dist/components/main.min.css";*/
-  /*margin: 0 8px;*/
-/*}*/
-
-

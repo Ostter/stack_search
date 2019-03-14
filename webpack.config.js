@@ -36,7 +36,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
           autoprefixer({
             flexbox: "no-2009"
           }),
-          require("postcss-flexbugs-fixes"),
+          require("postcss-flexbugs-fixes")
         ]
       }
     }
@@ -89,7 +89,7 @@ module.exports = {
             })
           }
         ]
-      },
+      }
       // {
       //   test: /\.tsx?$/,
       //   // use: "awesome-typescript-loader",
@@ -100,7 +100,7 @@ module.exports = {
   // resolve: {
   //   extensions: [".ts", ".tsx", ".js"]
   // },
-  devtool: "inline-source-map",
+  devtool: "inline-source-map"
   // plugins: [
   //   // Ignore require() calls in vs/language/typescript/lib/typescriptServices.js
   //   new webpack.IgnorePlugin(
