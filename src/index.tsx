@@ -88,7 +88,7 @@ function activate(
   });
 
   // Add the command to the palette.
-  palette.addItem({ command, category: "CustomExt" });
+  palette.addItem({ command, category: "Search" });
 
   // Track and restore the widget state
   const tracker = new InstanceTracker<Widget>({ namespace: "stackoverflow" });
