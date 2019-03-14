@@ -1,0 +1,31 @@
+@value colors: "snake-eyes/styleguide/variablesColors.module.css";
+@value GB-1, GS-2, MCO-3 from colors;
+
+.app {
+  text-align: center;
+}
+
+.block {
+  margin-top: 10px;
+}
+
+.result {
+  background-color: GB-1;
+  padding: 5px;
+}
+
+.marginSearch {
+  margin: 0 8px;
+}
+
+/*.whiteButton {*/
+  /*composes: typeNormalCancel from "~snake-eyes/dist/components/main.min.css";*/
+  /*margin: 0 8px;*/
+/*}*/
+
+/*.whiteInput {*/
+  /*composes: standardSize from "~snake-eyes/dist/components/main.min.css";*/
+  /*margin: 0 8px;*/
+/*}*/
+
+
